@@ -9,6 +9,7 @@ config.steam_user = "";
 config.steam_pass = "";
 config.discord_email = "";
 config.discord_pass = "";
+config.discord_servername = "";
 config.steam_guard_code = "";
 
 module.exports = config;

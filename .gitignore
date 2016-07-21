@@ -3,6 +3,7 @@ logs
 *.log
 npm-debug.log*
 config.js
+restartbot.sh
 
 # Runtime data
 pids

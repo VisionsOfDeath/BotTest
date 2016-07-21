@@ -38,8 +38,8 @@ var Pick = "";
 var date = new Date();
 var lastRavage = 0;
 var ravagecooldown = 150;
-//var DiscordServerName = "TestServer";
-var DiscordServerName = "EU Master Stack";
+var DiscordServerName = global.config.discord_servername;
+//var DiscordServerName = "EU Master Stack";
 
 
 discordbot.on("message", function(message) {
@@ -110,9 +110,8 @@ discordbot.on("message", function(message) {
                                     isDrafting = true;
                                     WriteToChannel("Group is now full! Someone use !captain to draft for Team B");
                                     //CreateDotaLobby(randomnumber);
-                                } else
-                                {
-                                    WriteToChannel(message.author.username + " joins the group! " + Group.length + "/" + LobbySize + " slots taken.")
+                                } else {
+                                    WriteToChannel(message.author.username + " joins the group! " + Group.length + "/" + LobbySize + " slots taken.");
                                 }
                             }
                         }else(
@@ -445,9 +444,7 @@ function DraftStatus()
 
 function CreateDotaLobby(lobbyname)
 {
-    if(Dota2.Lobby != null) {
-        Dota2.leavePracticeLobby();
-    }
+    Dota2.leavePracticeLobby();
     
     var steamids = [];
     
